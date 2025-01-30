@@ -50,7 +50,7 @@ class SnowflakeConnector:
             return True
             
         except Exception as e:
-            self.logger.error(f"Error connecting to Snowflake: {str(e)}")
+            logger.error(f"Error connecting to Snowflake: {str(e)}")
             return False
 
     def execute_query(self, query: str) -> Optional[List[Dict]]:
@@ -78,7 +78,7 @@ class SnowflakeConnector:
             return results
             
         except Exception as e:
-            logger.console(f"Error executing query: {str(e)}")
+            logger.error(f"Error executing query: {str(e)}")
             return None
 
     def close(self):
