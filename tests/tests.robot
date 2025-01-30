@@ -29,3 +29,5 @@ Sample
     SnowflakeConnector.Close
 
     Log To Console              ${results}
+    # sample data response content
+    # [{'C_CUSTKEY': 1, 'C_NAME': 'Customer#000000001', 'C_ADDRESS': 'IVhzIApeRb ot,c,E', 'C_NATIONKEY': 15, 'C_PHONE': '25-989-741-2988', 'C_ACCTBAL': Decimal('711.56'), 'C_MKTSEGMENT': 'BUILDING', 'C_COMMENT': 'to the even, regular platelets. regular, ironic epitaphs nag e'}]
