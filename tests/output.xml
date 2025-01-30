@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.6 on win32)" generated="2025-01-30T10:16:46.802086" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="c:\Users\erkka\work\Snowflake\tests\tests.robot">
+<test id="s1-t1" name="Sample" line="20">
+<kw name="Connect" owner="SnowflakeConnector">
+<msg time="2025-01-30T10:16:47.241314" level="INFO">Snowflake Connector for Python Version: 3.13.2, Python Version: 3.11.6, Platform: Windows-10-10.0.22631-SP0</msg>
+<msg time="2025-01-30T10:16:47.241314" level="INFO">Connecting to GLOBAL Snowflake domain</msg>
+<msg time="2025-01-30T10:16:47.241314" level="INFO">This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.</msg>
+<doc>Establish connection to Snowflake</doc>
+<status status="PASS" start="2025-01-30T10:16:47.241314" elapsed="1.048865"/>
+</kw>
+<kw name="Execute Query" owner="SnowflakeConnector">
+<msg time="2025-01-30T10:16:48.465125" level="INFO">${results} = [{'C_CUSTKEY': 1, 'C_NAME': 'Customer#000000001', 'C_ADDRESS': 'IVhzIApeRb ot,c,E', 'C_NATIONKEY': 15, 'C_PHONE': '25-989-741-2988', 'C_ACCTBAL': Decimal('711.56'), 'C_MKTSEGMENT': 'BUILDING', 'C_COMM...</msg>
+<var>${results}</var>
+<arg>query=Select * from CUSTOMER limit 1</arg>
+<doc>Execute a SQL query and return results</doc>
+<status status="PASS" start="2025-01-30T10:16:48.290179" elapsed="0.174946"/>
+</kw>
+<kw name="Close" owner="SnowflakeConnector">
+<msg time="2025-01-30T10:16:48.465125" level="INFO">closed</msg>
+<msg time="2025-01-30T10:16:48.493349" level="INFO">No async queries seem to be running, deleting session</msg>
+<doc>Close Snowflake connection and cursor</doc>
+<status status="PASS" start="2025-01-30T10:16:48.465125" elapsed="0.064616"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${results}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-30T10:16:48.530741" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-01-30T10:16:47.240314" elapsed="1.290427"/>
+</test>
+<status status="PASS" start="2025-01-30T10:16:46.804087" elapsed="1.727654"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
